@@ -1,10 +1,12 @@
-## How to deploy to Cloud Run on a new GCP project
+## Deploy to Cloud Run on a new GCP project
 
 Commands to run in cloud shell:
 
 Clone repo and change to directory
+```
 git clone https://github.com/bilydr/gemini-app
 cd gemini-app
+```
 
 Activate APIs
 ```
