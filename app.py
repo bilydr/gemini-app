@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 log_client = cloud_logging.Client()
 log_client.setup_logging()
 
-PROJECT_ID = os.environ.get('PROJECT_ID')   # Your Qwiklabs Google Cloud Project ID
-LOCATION = os.environ.get('REGION')         # Your Qwiklabs Google Cloud Project Region
+PROJECT_ID = os.environ.get('PROJECT_ID')   # Your Google Cloud Project ID
+LOCATION = os.environ.get('REGION')         # Your Google Cloud Project Region
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 @st.cache_resource
@@ -21,11 +21,12 @@ def load_models():
     text_model_pro = GenerativeModel("gemini-pro")
     multimodal_model_pro = GenerativeModel("gemini-pro-vision")
     return text_model_pro, multimodal_model_pro
+st.set_page_config("Gemini Playground", "🎃", layout="centered")
+st.header("Gemini 1.0 Pro Playground", divider="rainbow")
 
-st.header("Vertex AI Gemini API", divider="rainbow")
 text_model_pro, multimodal_model_pro = load_models()
 
-tab1, tab2, tab3, tab4 = st.tabs(["Story", "Marketing Campaign", "Image Playground", "Video Playground"])
+tab1, tab2, tab3, tab4 = st.tabs(["Story Writing", "Marketing Campaign", "Image Playground", "Video Playground"])
 
 with tab1:
     render_story_tab(text_model_pro)
