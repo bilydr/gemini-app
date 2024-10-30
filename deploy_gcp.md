@@ -71,4 +71,4 @@ gcloud run deploy "$SERVICE_NAME" \
   ```
 
 ### use cloud build for CI/CD
-see [cloudbuild.yaml](./cloudbuild.yaml) as example config file
+see [cloudbuild.yaml](./cloudbuild.yaml) as example config file to use Github commit on `main` branch to trigger image building and cloud run deployment
