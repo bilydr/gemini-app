@@ -70,3 +70,5 @@ gcloud run deploy "$SERVICE_NAME" \
   --set-env-vars=PROJECT_ID=$PROJECT_ID,REGION=$REGION
   ```
 
+### use cloud build for CI/CD
+see [cloudbuild.yaml](./cloudbuild.yaml) as example config file
