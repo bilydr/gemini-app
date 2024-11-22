@@ -21,7 +21,7 @@ def load_models():
     text_model_pro = GenerativeModel("gemini-pro")
     multimodal_model_pro = GenerativeModel("gemini-pro-vision")
     return text_model_pro, multimodal_model_pro
-st.set_page_config("Gemini Playground", "🎃", layout="centered")
+st.set_page_config("Gemini Playground", "🎄", layout="centered")
 st.header("Gemini 1.0 Pro Playground", divider="rainbow")
 
 text_model_pro, multimodal_model_pro = load_models()
