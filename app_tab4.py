@@ -6,7 +6,6 @@ import logging
 # render the Video Playground tab with multiple child tabs
 def render_video_playground_tab(multimodal_model_pro: GenerativeModel):
 
-    st.write("Using Gemini 1.0 Pro Vision - Multimodal model")
     video_desc, video_tags, video_highlights, video_geoloc = st.tabs(["Video description", "Video tags", "Video highlights", "Video geolocation"])
 
     with video_desc:

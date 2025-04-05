@@ -18,13 +18,12 @@ vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 @st.cache_resource
 def load_models():
-    text_model_pro = GenerativeModel("gemini-pro")
-    multimodal_model_pro = GenerativeModel("gemini-pro-vision")
-    return text_model_pro, multimodal_model_pro
-st.set_page_config("Gemini Playground", "🎄", layout="centered")
-st.header("Gemini GenAI Playground", divider="rainbow")
+    text_model = GenerativeModel("gemini-2.0-flash")
+    multimodal_model = GenerativeModel("gemini-2.0-flash")
+    return text_model, multimodal_model
 
-text_model_pro, multimodal_model_pro = load_models()
+st.header("Vertex AI Gemini API", divider="rainbow")
+text_model, multimodal_model = load_models()
 
 tab1, tab2, tab3, tab4 = st.tabs(["Story Writing", "Marketing Campaign", "Image Playground", "Video Playground"])
 

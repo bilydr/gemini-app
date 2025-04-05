@@ -37,7 +37,7 @@ def generate_prompt():
 
 # function to render the story tab, and call the model, and display the model prompt and response.
 def render_story_tab (text_model_pro: GenerativeModel):
-    st.write("Using Gemini 1.0 Pro - Text only model")
+    
     st.subheader("Generate a story")
 
     temperature, prompt = generate_prompt()
