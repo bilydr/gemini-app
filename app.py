@@ -22,29 +22,30 @@ def load_models():
     multimodal_model = GenerativeModel("gemini-2.0-flash")
     return text_model, multimodal_model
 
+st.set_page_config("Gemini Playground", "🚀", layout="centered")
 st.header("Vertex AI Gemini API", divider="rainbow")
 text_model, multimodal_model = load_models()
 
 tab1, tab2, tab3, tab4 = st.tabs(["Story Writing", "Marketing Campaign", "Image Playground", "Video Playground"])
 
 with tab1:
-    render_story_tab(text_model_pro)
+    render_story_tab(text_model)
 
 
 from app_tab2 import render_mktg_campaign_tab
 
 with tab2:
-    render_mktg_campaign_tab(text_model_pro)
+    render_mktg_campaign_tab(text_model)
 
 
 from app_tab3 import render_image_playground_tab
 
 with tab3:
-    render_image_playground_tab(multimodal_model_pro)
+    render_image_playground_tab(multimodal_model)
 
 
 from app_tab4 import render_video_playground_tab
 
 with tab4:
-    render_video_playground_tab(multimodal_model_pro)
+    render_video_playground_tab(multimodal_model)
 
